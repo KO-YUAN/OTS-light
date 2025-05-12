@@ -22,7 +22,8 @@ export default function Home() {
               Let’s create something amazing — together.
             </p>
             <Link
-              href="/"
+              href="https://www.104.com.tw/company/1a2x6bn9wd?jobsource=cd_my104_view_r"
+              target="_blank"
               className="bg-color_01 hover:bg-shade_06 w-[172px] h-12 flex justify-center items-center  rounded-[48px] font-semibold font-poppins text-sm text-neutral_01"
             >
               {" "}

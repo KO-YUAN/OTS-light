@@ -30,7 +30,8 @@ function Footer() {
               className="my-6"
             />
             <Link
-              href="/"
+              href="https://www.104.com.tw/company/1a2x6bn9wd?jobsource=cd_my104_view_r"
+              target="_blank"
               className="bg-color_01 hover:bg-shade_06  sm:w-[400px] w-[300px] h-[48px] flex justify-center items-center  rounded-[48px] text-neutral_01 font-poppins text-sm font-semibold "
             >
               {" "}
