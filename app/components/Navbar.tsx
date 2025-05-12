@@ -62,7 +62,15 @@ function Navbar() {
           >
             Join us
           </Link>
-          <Image src="/flag.svg" alt="Logo" width={48} height={48} />
+          <div className="cursor-pointer" onClick={toggleMenu}>
+            <div className="relative w-48 h-48 flex space-x-2">
+              <Image src="/flag1.svg" alt="Flag 1" width={48} height={48} className="rounded-full" />
+              <Image src="/flag2.svg" alt="Flag 2" width={48} height={48} className="rounded-full" />
+              <Image src="/flag3.svg" alt="Flag 3" width={48} height={48} className="rounded-full" />
+            </div>
+          </div>
+
+         
         </ul>
       </div>
 
@@ -107,31 +115,9 @@ function Navbar() {
         </div>
 
         <div className="mt-12 border-t pt-4 flex justify-around">
-          <Image
-            src="/flag3.svg"
-            alt="Taiwan"
-            width={48}
-            height={48}
-            className="rounded-full"
-          />
-          <div className="border-2 border-dotted border-blue-500 rounded-full p-1">
-            <Image
-              src="/flag.svg"
-              alt="USA"
-              width={48}
-              height={48}
-              className="rounded-full"
-            />
-          </div>
-          <div className="">
-            <Image
-              src="/flag2.svg"
-              alt="Japan"
-              width={48}
-              height={48}
-              className="rounded-full"
-            />
-          </div>
+          <Image src="/flag1.svg" alt="Flag 1" width={48} height={48} className="rounded-full" />
+          <Image src="/flag2.svg" alt="Flag 2" width={48} height={48} className="rounded-full" />
+          <Image src="/flag3.svg" alt="Flag 3" width={48} height={48} className="rounded-full" />
         </div>
       </div>
     </div>
