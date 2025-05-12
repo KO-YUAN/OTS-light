@@ -18,8 +18,8 @@ function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div className="bg-neutral_02">
-      <div className="max-w-[1360px] mx-auto h-24 flex justify-between items-center border-b-2 border-neutral_03 px-4">
+    <div className="bg-neutral_02 xl:px-4 sm:px-10 px-6">
+      <div className="max-w-[1360px] mx-auto h-24 flex justify-between items-center sm:border-b-2 border-neutral_03">
         <Link
           href="/"
           className="font-inter lg:text-[28px] md:text-[22px] text-base font-bold text-color_01 flex items-center gap-4"
@@ -45,11 +45,10 @@ function Navbar() {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className={`transition ${
-                    isActive
-                      ? "text-color_06"
-                      : "text-color_01 hover:text-blue-600"
-                  }`}
+                  className={`transition ${isActive
+                    ? "text-color_06"
+                    : "text-color_01 hover:text-blue-600"
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -58,8 +57,7 @@ function Navbar() {
           })}
 
           <Link
-            href="https://www.104.com.tw/company/1a2x6bn9wd?jobsource=cd_my104_view_r"
-            target="_blank"
+            href="/"
             className="bg-color_01 hover:bg-shade_06 text-neutral_01 md:w-[150px] w-[120px] md:h-12 h-10 flex justify-center items-center rounded-[48px] text-sm font-semibold"
           >
             Join us
@@ -96,11 +94,10 @@ function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`transition ${
-                  isActive
-                    ? "text-blue-500"
-                    : "text-gray-700 hover:text-blue-500"
-                }`}
+                className={`transition ${isActive
+                  ? "text-blue-500"
+                  : "text-gray-700 hover:text-blue-500"
+                  }`}
                 onClick={toggleMenu}
               >
                 {link.name}
