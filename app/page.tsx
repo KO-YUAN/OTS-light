@@ -235,7 +235,8 @@ export default function Home() {
             <div>
               <Image src="/user-2.png" alt="Logo" width={64} height={64} />
               <p className="text-neutral_04 font-poppins text-base font-medium mb-9 mt-[17px]">
-                Put in the effort, and we’ll dish out the goodies – 14 months of pay, sweet annual raises, and training perks to keep you growing (and glowing)! 
+               Here, it’s all about respect, trust, and real feedback — no fluff, no fuss! We’re looking for driven, honest, and positive people to grow and win together!
+With us, work isn’t just work — it’s the start of something big. Let’s team up, shake things up, and make some brag-worthy moves! 
                 {/* <br></br> */}
               </p>
             </div>
@@ -247,7 +248,7 @@ export default function Home() {
             <div>
               <Image src="/avatar.png" alt="Logo" width={64} height={64} />
               <p className="text-neutral_04 font-poppins text-base font-medium mb-9 mt-[17px]">
-                We don’t just cover the basics – we’ve got your back, front, and everything in between! Health insurance, extra coverage, sick days, birthday cash, baby bonuses, and a little something for life’s tougher moments. 
+                Put in the effort, and we’ll dish out the goodies – 14 months of pay, sweet annual raises, and training perks to keep you growing (and glowing)! 
               </p>
             </div>
             <p className="text-neutral_07 text-base font-poppins font-semibold">
@@ -258,8 +259,8 @@ export default function Home() {
             <div>
               <Image src="/user-3.png" alt="Logo" width={64} height={64} />
               <p className="text-neutral_04 font-poppins text-base font-medium mb-9 mt-[17px]">
-                Life at work? More like life of the party! We’re all about epic trips, team vibes, dinner bashes, and keeping the fun rolling – all while you’re cashing in those perks!
-              </p>
+               We don’t just cover the basics – we’ve got your back, front, and everything in between! Health insurance, extra coverage, sick days, birthday cash, baby bonuses, and a little something for life’s tougher moments. 
+               </p>
             </div>
             <p className="text-neutral_07 text-base font-poppins font-semibold">
               When you put in the effort, we double down on your future.
@@ -270,8 +271,8 @@ export default function Home() {
             <div>
               <Image src="/user-4.png" alt="Logo" width={64} height={64} />
               <p className="text-neutral_04 font-poppins text-base font-medium mb-9 mt-[17px]">
-                Work hard, snack harder! We’re all about good vibes, big perks, and epic moments – from fat paychecks and free snacks to epic trips and chill office vibes. Join us and make work the best part of your day! 
-              </p>
+               Life at work? More like life of the party! We’re all about epic trips, team vibes, dinner bashes, and keeping the fun rolling – all while you’re cashing in those perks!
+               </p>
             </div>
             <p className="text-neutral_07 text-base font-poppins font-semibold">
               Growth Without Limits
@@ -281,9 +282,7 @@ export default function Home() {
             <div>
               <Image src="/user-5.png" alt="Logo" width={64} height={64} />
               <p className="text-neutral_04 font-poppins text-base font-medium mb-9 mt-[17px]">
-                1, Unlimited Snacks & Drinks<br></br>
-                2, Extra Time Off (Because Life Matters)<br></br>
-                3, Festive Bonuses to Brighten Your Life
+                Work hard, snack harder! We’re all about good vibes, big perks, and epic moments – from fat paychecks and free snacks to epic trips and chill office vibes. Join us and make work the best part of your day! 
               </p>
             </div>
             <p className="text-neutral_07 text-base font-poppins font-semibold">
@@ -294,7 +293,7 @@ export default function Home() {
             <div>
               <Image src="/user-6.png" alt="Logo" width={64} height={64} />
               <p className="text-neutral_04 font-poppins text-base font-medium mb-9 mt-[17px]">
-                Video games, board games, escape rooms — we play hard and laugh harder.
+                Forget trust falls and awkward icebreakers – we’re talking real team bonding with epic getaways, wild dinners, and random surprise treats. Because building connections shouldn’t feel like homework. 
               </p>
             </div>
             <p className="text-neutral_07 text-base font-poppins font-semibold">
