@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Lang } from "../lib/lang";
+import { getDictionary } from "../[lang]/dictionaries";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -11,8 +13,9 @@ const navLinks = [
   { name: "About Us", href: "/about" },
 ];
 
-function Navbar() {
+function Navbar({ dict }) {
   const pathname = usePathname();
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);

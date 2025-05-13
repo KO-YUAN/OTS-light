@@ -1,7 +1,7 @@
 import { Poppins, Inter, Manrope } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
 
 
 const poppins = Poppins({
@@ -27,11 +27,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable} ${manrope.variable}`}>
-      <body className="antialiased font-[var(--font-manrope)] bg-white">
-        <Navbar />
-        {children}
-        <Footer/>
-      </body>
+       <body className="antialiased font-[var(--font-manrope)] bg-white">
+       {children}
+       </body>
     </html>
   );
 }
