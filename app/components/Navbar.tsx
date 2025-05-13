@@ -57,7 +57,8 @@ function Navbar() {
           })}
 
           <Link
-            href="/"
+            href="https://www.104.com.tw/company/1a2x6bn9wd?jobsource=cd_my104_view_r"
+            target="_blank"
             className="bg-color_01 hover:bg-shade_06 text-neutral_01 md:w-[150px] w-[120px] md:h-12 h-10 flex justify-center items-center rounded-[48px] text-sm font-semibold"
           >
             Join us
