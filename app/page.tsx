@@ -235,20 +235,19 @@ export default function Home() {
             <div>
               <Image src="/user-2.png" alt="Logo" width={64} height={64} />
               <p className="text-neutral_04 font-poppins text-base font-medium mb-9 mt-[17px]">
-                1, Work from anywhere you thrive — with two days of remote work each week. We care about results, not where you sit.
-                <br></br>
-                2, No work on make-up days — your weekends stay free.
+                Put in the effort, and we’ll dish out the goodies – 14 months of pay, sweet annual raises, and training perks to keep you growing (and glowing)! 
+                {/* <br></br> */}
               </p>
             </div>
             <p className="text-neutral_07 text-base font-poppins font-semibold">
-              Flexibility is king
+              Pay & Perks – Work hard, cash in:
             </p>
           </div>
           <div className="bg-neutral_01 flex flex-col justify-between rounded-[16px] pt-12 px-10 py-10">
             <div>
               <Image src="/avatar.png" alt="Logo" width={64} height={64} />
               <p className="text-neutral_04 font-poppins text-base font-medium mb-9 mt-[17px]">
-                The right tools, your call. From high-end MacBooks to custom setups, we’ll equip you for impact.
+                We don’t just cover the basics – we’ve got your back, front, and everything in between! Health insurance, extra coverage, sick days, birthday cash, baby bonuses, and a little something for life’s tougher moments. 
               </p>
             </div>
             <p className="text-neutral_07 text-base font-poppins font-semibold">
@@ -259,7 +258,7 @@ export default function Home() {
             <div>
               <Image src="/user-3.png" alt="Logo" width={64} height={64} />
               <p className="text-neutral_04 font-poppins text-base font-medium mb-9 mt-[17px]">
-                Generous pay, annual bonuses — we believe great work deserves great rewards.
+                Life at work? More like life of the party! We’re all about epic trips, team vibes, dinner bashes, and keeping the fun rolling – all while you’re cashing in those perks!
               </p>
             </div>
             <p className="text-neutral_07 text-base font-poppins font-semibold">
@@ -271,8 +270,7 @@ export default function Home() {
             <div>
               <Image src="/user-4.png" alt="Logo" width={64} height={64} />
               <p className="text-neutral_04 font-poppins text-base font-medium mb-9 mt-[17px]">
-                1, Curious minds welcome — we cover the cost of your learning adventures.<br></br>
-                2, Weekly Team Workout, plus a monthly fitness subsidy.
+                Work hard, snack harder! We’re all about good vibes, big perks, and epic moments – from fat paychecks and free snacks to epic trips and chill office vibes. Join us and make work the best part of your day! 
               </p>
             </div>
             <p className="text-neutral_07 text-base font-poppins font-semibold">
