@@ -36,11 +36,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Link
+        {/* <Link
           href="#"
           className="sm:flex  sm:text-start text-center items-center justify-center gap-3 text-neutral_04 font-poppins font-medium text-xs mt"
         >
-          <span className="bg-neutral_03 sm:mx-0  mx-auto h-6 w-6 flex justify-center items-center rounded-full">
+          <span className="bg-neutral_03 sm:mx-0  mx-auto h-6 w-6 w-auto flex justify-center items-center rounded-full">
             <svg
               width={8}
               height={8}
@@ -72,8 +72,8 @@ export default function Home() {
             </svg>
 
           </span>
-          <span className="inline-block w-full sm:mt-0 mt-2">Scroll down</span>
-        </Link>
+          <span className="inline-block w-auto sm:mt-0 mt-2">Scroll down</span>
+        </Link> */}
       </section>
 
       <section className="md:pt-[50px] pt-5">
