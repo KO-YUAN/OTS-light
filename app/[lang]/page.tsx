@@ -1,12 +1,26 @@
 
 import Home from "../components/Home";
+import {Lang, supportedLangs } from "../lib/lang";
+import { getDictionary } from "./dictionaries";
 
 export async function generateStaticParams() {
-  return [{ lang: 'en-US' }, { lang: 'hi' }, { lang: 'zh-TW' }]
+  return supportedLangs.map((lang) => ({ lang }))
 }
 
-export default function RootPage() {
+export default async function RootPage(
+  {
+    params
+  }: Readonly<{ 
+      params: {
+          lang: Lang
+      }
+   }>
+) {
+ const lang = params.lang
+const dict = await getDictionary(lang) // en
+
+
   return (
-   <Home/>
+   <Home dict={dict} />
   );
 }

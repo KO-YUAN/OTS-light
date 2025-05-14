@@ -22,7 +22,7 @@ export default async function Layout({
       <>
         <Navbar dict={dict} />
         {children}
-        <Footer/>
+        <Footer dict={dict}/>
       </>
   );
 }
