@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Lang } from "../lib/lang";
-import { getDictionary } from "../[lang]/dictionaries";
+// import { Lang } from "../lib/lang";
+// import { getDictionary } from "../[lang]/dictionaries";
+import { LangDictionary } from "../lib/dictionary";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -13,7 +14,12 @@ const navLinks = [
   { name: "About Us", href: "/about" },
 ];
 
-function Navbar({ dict }) {
+function Navbar({
+   dict
+  }: Readonly<{ 
+  dict: LangDictionary
+}>) {
+  
   const pathname = usePathname();
   
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +34,7 @@ function Navbar({ dict }) {
           className="font-inter lg:text-[28px] md:text-[22px] text-base font-bold text-color_01 flex items-center gap-4"
         >
           <Image src="/logo.svg" alt="Logo" width={40} height={40} />
-          OPPORTUNE SOFT
+          OPPORTUNE SOFT 
         </Link>
 
         {/* Toggle Button */}
@@ -40,7 +46,7 @@ function Navbar({ dict }) {
             height={30}
           />
         </div>
-
+        <p className="text-black">{dict.products.cart}</p>
         <ul className="hidden sm:flex lg:gap-[39px] gap-[18px] items-center font-poppins font-semibold md:text-sm text-xs capitalize">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
