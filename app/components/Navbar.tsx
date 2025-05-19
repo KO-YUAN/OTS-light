@@ -38,7 +38,7 @@ function Navbar({dict}: Readonly<{ dict: LangDictionary}>) {
             height={30}
           />
         </div>
-        {/* <p className="text-black">{dict.dictionaries.cart}</p> */}
+        {/* <p className="text-black">{dict?.dictionaries.cart}</p> */}
         <ul className="hidden sm:flex lg:gap-[39px] gap-[18px] items-center font-poppins font-semibold md:text-sm text-xs capitalize">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
@@ -53,7 +53,7 @@ function Navbar({dict}: Readonly<{ dict: LangDictionary}>) {
             href="https://www.104.com.tw/company/1a2x6bn9wd?jobsource=cd_my104_view_r"
             target="_blank"
             className="bg-color_01 hover:bg-shade_06 text-neutral_01 md:w-[150px] w-[120px] md:h-12 h-10 flex justify-center items-center rounded-[48px] text-sm font-semibold">
-            {dict.products["join-btn"]}
+            {dict?.products["join-btn"]}
           </Link>
   {/* 這一段是PC語系選擇 */}
             <div className="flex space-x-2">
