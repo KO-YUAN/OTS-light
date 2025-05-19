@@ -5,7 +5,7 @@ import { LangDictionary } from '../lib/dictionary'
 
 const dictionaries = {
     ['en-US']: () => import('../dictionaries/lang/en-US.json').then((module) => module.default),
-    ['hi']: () => import('../dictionaries/lang/hi.json').then((module) => module.default),
+    ['hi-IN']: () => import('../dictionaries/lang/hi-IN.json').then((module) => module.default),
     ['zh-TW']: () => import('../dictionaries/lang/zh-TW.json').then((module) => module.default),
   }
    

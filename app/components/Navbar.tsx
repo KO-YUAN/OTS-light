@@ -46,7 +46,7 @@ function Navbar({
             height={30}
           />
         </div>
-        <p className="text-black">{dict.products.cart}</p>
+        {/* <p className="text-black">{dict.dictionaries.cart}</p> */}
         <ul className="hidden sm:flex lg:gap-[39px] gap-[18px] items-center font-poppins font-semibold md:text-sm text-xs capitalize">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;

@@ -1,5 +1,10 @@
 {
     "products": {
-      "cart": "Add to Cart"
+      "Join us": "加入我們",
+      "Join Us to Redefine the Ordinary": "加入我們，共同重新定義平凡",
+      "Build the future with tech": "與科技共建未來，以創意顛覆平凡。讓我們一起創造非凡！",
+      "Come join us now": "立即加入我們吧！",
+      "Where Performance Meets Elegance": "性能與優雅的完美結合",
+      "text-neutral_04": "打造速度與優雅的完美平衡 — 以 Go 驅動，React 設計。我們堅信，開發應該是一場流暢而富有創意的旅程：清晰架構、明確流程、優雅成果。"
     }
   }

@@ -1,3 +1,3 @@
-export const supportedLangs = ['en-US', 'hi', 'zh-TW'] as const;
+export const supportedLangs = ['en-US', 'hi-IN', 'zh-TW'] as const;
 
 export type Lang = (typeof supportedLangs)[number];
