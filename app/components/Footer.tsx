@@ -7,9 +7,7 @@ import { LangDictionary } from "../lib/dictionary";
 
 function Footer({
    dict
-  }: Readonly<{ 
-  dict: LangDictionary
-}>) {
+  }: Readonly<{ dict: LangDictionary}>) {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpencom, setIsOpencom] = useState(false);
   return (
@@ -21,11 +19,10 @@ function Footer({
         >
           <div className="flex flex-col justify-center items-center h-screen px-4">
             <h2 className="text-neutral_07  font-poppins font-semibold lg:text-[72px] md:text-6xl sm:text-5xl text-[48px] mb-2">
-              Ready to Join us?
+              {dict.products["footer-title"]}
             </h2>
             <p className="text-neutral_04 font-poppins lg:text-[28px] md:text-2xl text-xl font-medium tracking-[-3%]">
-              Code it, sketch it, ship it. Let’s build what others haven’t even
-              imagined yet.
+               {dict.products["footer-subtitle"]}
             </p>
             <Image
               src="/user.svg"
@@ -39,8 +36,7 @@ function Footer({
               target="_blank"
               className="bg-color_01 hover:bg-shade_06  sm:w-[400px] w-[300px] h-[48px] flex justify-center items-center  rounded-[48px] text-neutral_01 font-poppins text-sm font-semibold "
             >
-              {" "}
-              Come join us now{" "}
+              {dict.products["join-btn"]}
             </Link>
           </div>
         </div>

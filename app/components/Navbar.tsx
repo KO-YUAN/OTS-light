@@ -14,16 +14,9 @@ const navLinks = [
   { name: "About Us", href: "/about" },
 ];
 
-function Navbar({
-   dict
-  }: Readonly<{ 
-  dict: LangDictionary
-}>) {
-  
+function Navbar({dict}: Readonly<{ dict: LangDictionary}>) {
   const pathname = usePathname();
-  
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
@@ -31,8 +24,7 @@ function Navbar({
       <div className="max-w-[1360px] mx-auto h-24 flex justify-between items-center sm:border-b-2 border-neutral_03">
         <Link
           href="/"
-          className="font-inter lg:text-[28px] md:text-[22px] text-base font-bold text-color_01 flex items-center gap-4"
-        >
+          className="font-inter lg:text-[28px] md:text-[22px] text-base font-bold text-color_01 flex items-center gap-4">
           <Image src="/logo.svg" alt="Logo" width={40} height={40} />
           OPPORTUNE SOFT 
         </Link>
@@ -52,15 +44,7 @@ function Navbar({
             const isActive = pathname === link.href;
             return (
               <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className={`transition ${isActive
-                    ? "text-color_06"
-                    : "text-color_01 hover:text-blue-600"
-                    }`}
-                >
-                  {link.name}
-                </Link>
+                <Link href={link.href} className={`transition ${isActive? "text-color_06": "text-color_01 hover:text-blue-600"}`}>{link.name}</Link>
               </li>
             );
           })}
@@ -68,18 +52,22 @@ function Navbar({
           <Link
             href="https://www.104.com.tw/company/1a2x6bn9wd?jobsource=cd_my104_view_r"
             target="_blank"
-            className="bg-color_01 hover:bg-shade_06 text-neutral_01 md:w-[150px] w-[120px] md:h-12 h-10 flex justify-center items-center rounded-[48px] text-sm font-semibold"
-          >
-            Join us
+            className="bg-color_01 hover:bg-shade_06 text-neutral_01 md:w-[150px] w-[120px] md:h-12 h-10 flex justify-center items-center rounded-[48px] text-sm font-semibold">
+            {dict.products["join-btn"]}
           </Link>
-          <div className="cursor-pointer" onClick={toggleMenu}>
-            <div className="relative w-48 h-48 flex space-x-2">
-              <Image src="/flag1.svg" alt="Flag 1" width={48} height={48} className="rounded-full" />
-              <Image src="/flag2.svg" alt="Flag 2" width={48} height={48} className="rounded-full" />
-              <Image src="/flag3.svg" alt="Flag 3" width={48} height={48} className="rounded-full" />
+  {/* 這一段是PC語系選擇 */}
+            <div className="flex space-x-2">
+              <Link href='/en-US' scroll={false} >
+                <Image src="/en-US.svg" alt="en-US" width={48} height={48} className="rounded-full" />
+              </Link>
+              <Link href='/hi-IN' scroll={false}>
+                <Image src="/hi-IN.svg" alt="hi-IN" width={48} height={48} className="rounded-full" />
+              </Link>
+              <Link href='/zh-TW' scroll={false}>
+                <Image src="/zh-TW.svg" alt="zh-TW" width={48} height={48} className="rounded-full" />
+              </Link>
             </div>
-          </div>
-
+  
          
         </ul>
       </div>
@@ -88,6 +76,8 @@ function Navbar({
         <div className="fixed inset-0  z-40" onClick={toggleMenu}></div>
       )}
 
+
+  {/* 這一段是手機版展開選擇語系視窗 */}
       <div
         className={`
           fixed top-[268px] left-1/2  transform -translate-x-1/2 -translate-y-1/2 w-[300%] max-w-xs bg-white shadow-lg z-50 rounded-[40px] p-6 flex flex-col  transition-transform duration-300
@@ -125,9 +115,15 @@ function Navbar({
         </div>
 
         <div className="mt-12 border-t pt-4 flex justify-around">
-          <Image src="/flag1.svg" alt="Flag 1" width={48} height={48} className="rounded-full" />
-          <Image src="/flag2.svg" alt="Flag 2" width={48} height={48} className="rounded-full" />
-          <Image src="/flag3.svg" alt="Flag 3" width={48} height={48} className="rounded-full" />
+          <Link href='/en-US' scroll={false} >
+            <Image src="/en-US.svg" alt="en-US" width={48} height={48} className="rounded-full" />
+          </Link>
+          <Link href='/hi-IN' scroll={false}>
+            <Image src="/hi-IN.svg" alt="hi-IN" width={48} height={48} className="rounded-full" />
+          </Link>
+          <Link href='/zh-TW' scroll={false}>
+            <Image src="/zh-TW.svg" alt="zh-TW" width={48} height={48} className="rounded-full" />
+          </Link>
         </div>
       </div>
     </div>
