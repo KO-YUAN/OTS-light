@@ -6,16 +6,16 @@ export async function generateStaticParams() {
     return supportedLangs.map((lang) => ({ lang }))
   }
 
+interface LayoutProps {
+  children: React.ReactNode;
+  params: Promise<{ lang: Lang }>;
+}
+
 export default async function Layout({
   children,
   params
-}: Readonly<{ 
-    children: React.ReactNode
-    params: {
-        lang: Lang
-    }
- }>) {
-    const lang = params.lang
+}: Readonly<LayoutProps>) {
+    const {lang} = await params
     const dict = await getDictionary(lang) // en
 
   return (

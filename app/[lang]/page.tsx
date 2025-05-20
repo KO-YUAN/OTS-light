@@ -7,16 +7,15 @@ export async function generateStaticParams() {
   return supportedLangs.map((lang) => ({ lang }))
 }
 
+interface PageProps {
+  params: Promise<{ lang: Lang }>;
+}
+
 export default async function RootPage(
   {
-    params
-  }: Readonly<{ 
-      params: {
-          lang: Lang
-      }
-   }>
-) {
- const lang = params.lang
+  params
+  }: Readonly<PageProps>)  {
+ const {lang} = await params
 const dict = await getDictionary(lang) // en
 
 

@@ -22,7 +22,7 @@ function Footer({
               {dict?.products["footer-title"]}
             </h2>
             <p className="text-neutral_04 font-poppins lg:text-[28px] md:text-2xl text-xl font-medium tracking-[-3%]">
-               {dict?.products["footer-title"]}
+               {dict?.products["footer-subtitle"]}
             </p>
             <Image
               src="/user.svg"
