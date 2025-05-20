@@ -90,13 +90,7 @@ export default function Home({dict}: Readonly<{ dict: LangDictionary}>) {
                   </p>
                 </div>
                 <div className="bg-color_05 w-[75px] h-[75px] rounded-full flex justify-center items-center ">
-                  <Image
-                    src="/envolop.png"
-                    alt="Logo"
-                    width={48}
-                    height={48}
-                    className="lg:w-12 w-[39px]"
-                  />
+                  <Image src="/envolop.png" alt="Logo" width={48} height={48} className="lg:w-12 w-[39px]"/>
                 </div>
               </div>
               <div className="flex justify-between items-center border-b-2 gap-6 xl:gap-0 border-neutral_03 xl:py-10 py-8">
@@ -109,13 +103,7 @@ export default function Home({dict}: Readonly<{ dict: LangDictionary}>) {
                   </p>
                 </div>
                 <div className="bg-color_02 w-[75px] h-[75px] rounded-full flex justify-center items-center ">
-                  <Image
-                    src="/interaction.png"
-                    alt="Logo"
-                    width={48}
-                    height={48}
-                    className="lg:w-12 w-[39px]"
-                  />
+                  <Image src="/interaction.png" alt="Logo" width={48} height={48} className="lg:w-12 w-[39px]"/>
                 </div>
               </div>
               <div className="flex justify-between items-center gap-6 xl:gap-0 xl:pt-10 pt-8">

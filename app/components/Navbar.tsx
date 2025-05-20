@@ -27,7 +27,7 @@ const navLinks = [
     <div className="bg-neutral_02 xl:px-4 sm:px-10 px-6">
       <div className="max-w-[1360px] mx-auto h-24 flex justify-between items-center sm:border-b-2 border-neutral_03">
         <Link
-          href="/"
+          href={`/${lang}`}
           className="font-inter lg:text-[28px] md:text-[22px] text-base font-bold text-color_01 flex items-center gap-4">
           <Image src="/logo.svg" alt="Logo" width={40} height={40} />
           OPPORTUNE SOFT 
