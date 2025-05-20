@@ -156,15 +156,6 @@ export default async function contact({params}: Readonly<PageProps>) {
 
               <Link href="#" className="mt-4 w-full h-12 bg-color_01 hover:bg-shade_06 rounded-[48px] flex justify-center items-center text-neutral_01  font-poppins font-semibold text-sm" >Send now</Link>
             </form>
-
-            <div className="top-5 right-5 absolute ">
-              <Image
-                src="/menu-close.svg"
-                alt="Close Menu"
-                width={24}
-                height={24}
-              />
-            </div>
           </div>
         </div>
 
