@@ -3,16 +3,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname ,useRouter,useParams} from "next/navigation";
-// import { Lang } from "../lib/lang";
-// import { getDictionary } from "../[lang]/dictionaries";
+import { usePathname } from "next/navigation";
 import { LangDictionary } from "../lib/dictionary";
 import { Lang } from "../lib/lang";
 
 function Navbar({dict,lang}: Readonly<{ dict: LangDictionary, lang: Lang }>) {
-  const router = useRouter();
   const pathname = usePathname();
-  const params = useParams();
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 console.log("pathname",pathname,`/${lang}${pathname.split(lang)[1]}`)
@@ -48,7 +44,12 @@ const navLinks = [
             const isActive = pathname === link.href;
             return (
               <li key={link.name}>
-                <Link href={link.href} className={`transition ${isActive? "text-color_06": "text-color_01 hover:text-blue-600"}`}>{link.name}</Link>
+                <Link
+                  href={link.href}
+                  className={`transition whitespace-nowrap ${isActive ? "text-color_06" : "text-color_01 hover:text-blue-600"}`}
+                >
+                  {link.name}
+                </Link>
               </li>
             );
           })}
@@ -56,7 +57,7 @@ const navLinks = [
           <Link
             href="https://www.104.com.tw/company/1a2x6bn9wd?jobsource=cd_my104_view_r"
             target="_blank"
-            className="bg-color_01 hover:bg-shade_06 text-neutral_01 md:w-[150px] w-[120px] md:h-12 h-10 flex justify-center items-center rounded-[48px] text-sm font-semibold">
+            className="bg-color_01 hover:bg-shade_06 text-neutral_01 md:w-[150px] w-[120px] md:h-12 h-10 flex justify-center items-center rounded-[48px] text-sm font-semibold transition whitespace-nowrap">
             {dict?.products["join-btn"]}
           </Link>
   {/* 這一段是PC語系選擇 */}

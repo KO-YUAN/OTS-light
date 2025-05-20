@@ -1,20 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {Lang, supportedLangs } from "../../lib/lang";
-import { getDictionary } from "../../[lang]/dictionaries";
 
-export async function generateStaticParams() {
-  return supportedLangs.map((lang) => ({ lang }))
-}
-
-
-interface PageProps {
-  params: Promise<{ lang: Lang }>;
-}
-export default async function contact({params}: Readonly<PageProps>) {
-  const {lang} = await params
-  const dict = await getDictionary(lang) 
+function page() {
   return (
     <div className="bg-[#f2f3f6]">
       <section className="md:flex  justify-between md:pl-[128px] py-10">
@@ -61,3 +49,4 @@ export default async function contact({params}: Readonly<PageProps>) {
   );
 }
 
+export default page;

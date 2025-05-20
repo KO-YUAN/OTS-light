@@ -1,31 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import {Lang, supportedLangs } from "../../lib/lang";
-import { getDictionary } from "../../[lang]/dictionaries";
-export async function generateStaticParams() {
-  return supportedLangs.map((lang) => ({ lang }))
-}
-
-interface PageProps {
-  params: Promise<{ lang: Lang }>;
-}
-
-export default async function about({params}: Readonly<PageProps>) {
-  const {lang} = await params
-  const dict = await getDictionary(lang) 
+function page() {
   return (
     <div className="">
       <div className="bg-neutral_02 ">
         <section className="max-w-[1251px] mx-auto sm:pt-[72px] pt-5 xl:px-4 sm:px-20 px-6">
           <h1 className="text-neutral_07 md:text-[72px] text-5xl font-poppins font-semibold">
-            {dict.products["about-us"]}
+            About us
           </h1>
           <div className="flex md:flex-row flex-col-reverse lg:gap-[22px] md:gap-[10px] gap-5 md:mt-[55px] mt-5">
             <div className="xl:w-5/12 md:w-1/2 w-full">
               <div className="max-w-[460px]">
                 <h2 className="text-neutral_07 md:text-[35px] text-[30px]  font-semibold font-poppins md:block hidden">
-                   {dict.products["about-us-title"]}
+                  What is OPPORTUNE SOFT
                 </h2>
                 <div className="flex sm:flex-row flex-col gap-5 sm:mt-4 mt-0 ">
                   <p className="text-neutral_04 sm:w-1/2 w-full text-base font-poppins font-medium">
@@ -118,3 +105,4 @@ export default async function about({params}: Readonly<PageProps>) {
   );
 }
 
+export default page;

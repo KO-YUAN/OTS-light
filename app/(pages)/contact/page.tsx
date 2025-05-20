@@ -1,36 +1,29 @@
+'use client';
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {Lang, supportedLangs } from "../../lib/lang";
-import { getDictionary } from "../../[lang]/dictionaries";
-export async function generateStaticParams() {
-  return supportedLangs.map((lang) => ({ lang }))
-}
 
-interface PageProps {
-  params: Promise<{ lang: Lang }>;
-}
-
-export default async function contact({params}: Readonly<PageProps>) {
-  const {lang} = await params
-  const dict = await getDictionary(lang) 
-
+function page() {
   return (
     <div className="bg-shade_02">
       <section className="bg-neutral_02 relative md:py-[81px] sm:py-12 pt-12 pb-[72px] overflow-hidden">
         <div className="">
           <h1 className="text-neutral_07  font-poppins md:text-7xl text-5xl font-semibold text-center relative z-30">
-            {dict.products["contact-us"]}
+            Contact us
           </h1>
         </div>
         <div className="max-w-[1024px] px-4 mx-auto flex gap-10 sm:mt-[83px] mt-12 relative z-10">
           <div className="w-1/2 bg-neutral_01 rounded-[16px] sm:block hidden">
             <div className="md:px-[47px] px-5 md:pt-14 pt-10">
               <h2 className="text-neutral_07 md:text-4xl text-3xl font-poppins font-semibold mb-4">
-                {dict.products["contact-us-title"]}
+                We’d love to hear from you!
               </h2>
               <p className="text-neutral_04 font-medium font-poppins text-base ">
-                {dict.products["contact-us-subtitle"]}
+                Whether you have a question, need support, or just want to say
+                hello — we’re here for you. Our team is friendly, responsive,
+                and always happy to help. Reach out anytime — we’ll get back to
+                you as quickly as we can!
               </p>
             </div>
             <div className="px-4 pb-3">
@@ -41,10 +34,11 @@ export default async function contact({params}: Readonly<PageProps>) {
           </div>
           <div className="sm:w-1/2 w-full bg-neutral_01 rounded-[16px] pt-12 px-8 pb-10 relative">
             <h2 className="text-neutral_07 sm:text-[28px] text-xl font-poppins font-medium text-center">
-              {dict.products["contact-us"]}
+              Contact us
             </h2>
             <p className="font-poppins text-neutral_04 text-sm font-medium sm:block hidden text-center">
-              {dict.products["contact-us-sub-subtitle"]}
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint.
             </p>
 
             <form action="#" className="sm:mt-7 mt-6">
@@ -207,3 +201,5 @@ export default async function contact({params}: Readonly<PageProps>) {
     </div>
   );
 }
+
+export default page;
