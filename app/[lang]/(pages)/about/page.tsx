@@ -48,6 +48,7 @@ export default async function about({params}: Readonly<PageProps>) {
           <Image src="/hero-about.png" alt="Logo" width={1100} height={100} className="w-[100%] h-auto" />
         </section>
 
+{/* 這裡是人員介紹區，先隱藏，未來會用到 */}
         {/* <section className="sm:mt-[64px] mt-[30px] sm:pb-[126px] pb-[30px] sm:px-4 px-5">
           <div>
             <h2 className="font-poppins text-neutral_07 font-semibold text-4xl text-center">Meet the team</h2>
