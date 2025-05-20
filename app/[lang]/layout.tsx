@@ -20,7 +20,7 @@ export default async function Layout({
 
   return (
       <>
-        <Navbar dict={dict} />
+        <Navbar dict={dict} lang={lang} />
         {children}
         <Footer dict={dict}/>
       </>

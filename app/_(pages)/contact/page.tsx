@@ -1,10 +1,20 @@
-'use client';
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {Lang, supportedLangs } from "../../lib/lang";
+import { getDictionary } from "../../[lang]/dictionaries";
+export async function generateStaticParams() {
+  return supportedLangs.map((lang) => ({ lang }))
+}
 
-function page() {
+interface PageProps {
+  params: Promise<{ lang: Lang }>;
+}
+
+export default async function contact({params}: Readonly<PageProps>) {
+  const {lang} = await params
+  const dict = await getDictionary(lang) 
+
   return (
     <div className="bg-shade_02">
       <section className="bg-neutral_02 relative md:py-[81px] sm:py-12 pt-12 pb-[72px] overflow-hidden">
@@ -197,5 +207,3 @@ function page() {
     </div>
   );
 }
-
-export default Home;

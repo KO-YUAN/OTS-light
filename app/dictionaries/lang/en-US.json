@@ -2,7 +2,7 @@
   "products": {
     "home-title": "Join Us to Redefine the Ordinary",
     "home-subtitle":"Build the future with tech. Disrupt the ordinary with creativity.Let’s create something amazing — together.",
-    "join-btn":"Come join us now",
+    "join-btn":"Join us now",
     "home-btn":"Home",
     "contact-btn":"Contact Us",
     "about-us-btn":"About Us",
@@ -40,6 +40,9 @@
     "contact-us-subtitle":"Whether you have a question, need support, or just want to say hello — we’re here for you. Our team is friendly, responsive, and always happy to help. Reach out anytime — we’ll get back to you as quickly as we can!",
     "contact-us-sub-subtitle":"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
     "about-us":"About Us",
-    "about-us-title":"What is OPPORTUNE SOFT"
+    "about-us-title":"What is OPPORTUNE SOFT",
+    "about-us-sub-story-01":"Founded by a team of tech enthusiasts, Opportune Soft values collaboration, growth, and innovation. We foster a culture built on harmony, vitality, creativity, and unity, where everyone is trusted to thrive in the right role.",
+    "about-us-sub-story-02":"With an open management style, we encourage initiative, honest communication, and diverse ideas—working together with empathy and integrity toward a shared vision.",
+    "about-us-story":"Our vision is to become a flagship enterprise leading innovation and quality standards in the software outsourcing industry. Our mission is to leverage cutting-edge technology and high-performance products to deliver tailored digital solutions for various businesses and organizations, helping our clients thrive amid digital transformation, achieve business growth, and pursue sustainable development."
   }
 }

@@ -3,6 +3,7 @@ import 'server-only'
 import { Lang } from '../lib/lang'
 import { LangDictionary } from '../lib/dictionary'
 
+
 const dictionaries = {
     ['en-US']: () => import('../dictionaries/lang/en-US.json').then((module) => module.default),
     ['hi-IN']: () => import('../dictionaries/lang/hi-IN.json').then((module) => module.default),

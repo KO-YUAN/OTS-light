@@ -1,47 +1,44 @@
 import React from "react";
 import Image from "next/image";
-function page() {
+import {Lang, supportedLangs } from "../../../lib/lang";
+import { getDictionary } from "../../../[lang]/dictionaries";
+export async function generateStaticParams() {
+  return supportedLangs.map((lang) => ({ lang }))
+}
+
+interface PageProps {
+  params: Promise<{ lang: Lang }>;
+}
+
+export default async function about({params}: Readonly<PageProps>) {
+  const {lang} = await params
+  const dict = await getDictionary(lang) 
   return (
     <div className="">
       <div className="bg-neutral_02 ">
         <section className="max-w-[1251px] mx-auto sm:pt-[72px] pt-5 xl:px-4 sm:px-20 px-6">
           <h1 className="text-neutral_07 md:text-[72px] text-5xl font-poppins font-semibold">
-            About us
+            {dict.products["about-us"]}
           </h1>
           <div className="flex md:flex-row flex-col-reverse lg:gap-[22px] md:gap-[10px] gap-5 md:mt-[55px] mt-5">
             <div className="xl:w-5/12 md:w-1/2 w-full">
               <div className="max-w-[460px]">
                 <h2 className="text-neutral_07 md:text-[35px] text-[30px]  font-semibold font-poppins md:block hidden">
-                  What is OPPORTUNE SOFT
+                   {dict.products["about-us-title"]}
                 </h2>
                 <div className="flex sm:flex-row flex-col gap-5 sm:mt-4 mt-0 ">
                   <p className="text-neutral_04 sm:w-1/2 w-full text-base font-poppins font-medium">
-                    Founded by a team of tech enthusiasts, Opportune Soft values
-                    collaboration, growth, and innovation. We foster a culture built
-                    on harmony, vitality, creativity, and unity, where everyone is
-                    trusted to thrive in the right role.
+                    {dict.products["about-us-sub-story-01"]}
                   </p>
                   <p className="text-neutral_04 sm:w-1/2 w-full text-base font-poppins font-medium">
-                    With an open management style, we encourage initiative, honest
-                    communication, and diverse ideas—working together with empathy
-                    and integrity toward a shared vision.
+                    {dict.products["about-us-sub-story-02"]}
                   </p>
                 </div>
               </div>
             </div>
             <div className="xl:w-7/12 md:w-1/2 w-full -ml-1">
-              <h2 className="text-neutral_07 md:text-4xl md:text-[36px] mb-5 text-2xl font-semibold font-poppins block md:hidden">
-                What is OPPORTUNE SOFT
-              </h2>
               <p className="font-poppins font-medium md:text-[22px] text-lg text-neutral_06 sm:leading-[32px] leading-7 tracking-[-1%]">
-                Our vision is to become a flagship enterprise leading innovation
-                and quality standards in the software outsourcing industry. <br />
-                Our
-                mission is to leverage cutting-edge technology and
-                high-performance products to deliver tailored digital solutions
-                for various businesses and organizations, helping our clients
-                thrive amid digital transformation, achieve business growth, and
-                pursue sustainable development.
+                 {dict.products["about-us-story"]}
               </p>
             </div>
           </div>
@@ -51,7 +48,7 @@ function page() {
           <Image src="/hero-about.png" alt="Logo" width={1100} height={100} className="w-[100%] h-auto" />
         </section>
 
-        <section className="sm:mt-[64px] mt-[30px] sm:pb-[126px] pb-[30px] sm:px-4 px-5">
+        {/* <section className="sm:mt-[64px] mt-[30px] sm:pb-[126px] pb-[30px] sm:px-4 px-5">
           <div>
             <h2 className="font-poppins text-neutral_07 font-semibold text-4xl text-center">Meet the team</h2>
             <p className="font-poppins text-neutral_04 font-medium text-base mt-6 text-center">Together, we create access to information and build products for everyone. Want to become an OPPORTUNE SOFT employee? Find your team.</p>
@@ -99,10 +96,9 @@ function page() {
               <p className="text-neutral_04 font-poppins font-semibold text-base ">Administrative Assistant</p>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );
 }
 
-export default page;

@@ -5,9 +5,9 @@ import Footer from "./components/Footer";
 export default function RootPage() {
   return (
     <>
-    <Navbar lang="en-US"/>
-        <Home/>
-    <Footer/>
+    {/* <Navbar lang="en-US"/> */}
+        {/* <Home/> */}
+    {/* <Footer/> */}
     </>
   );
 }

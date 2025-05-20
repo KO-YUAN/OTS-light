@@ -3,21 +3,25 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname ,useRouter,useParams} from "next/navigation";
 // import { Lang } from "../lib/lang";
 // import { getDictionary } from "../[lang]/dictionaries";
 import { LangDictionary } from "../lib/dictionary";
+import { Lang } from "../lib/lang";
 
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Contact Us", href: "/contact" },
-  { name: "About Us", href: "/about" },
-];
-
-function Navbar({dict}: Readonly<{ dict: LangDictionary}>) {
+function Navbar({dict,lang}: Readonly<{ dict: LangDictionary, lang: Lang }>) {
+  const router = useRouter();
   const pathname = usePathname();
+  const params = useParams();
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
+console.log("pathname",pathname,`/${lang}${pathname.split(lang)[1]}`)
+const navLinks = [
+  { name: "Home", href: `/${lang}` },
+  { name: "Contact Us", href: `/${lang}/contact` },
+  { name: "About Us", href: `../${lang}/about` },
+];
+
 
   return (
     <div className="bg-neutral_02 xl:px-4 sm:px-10 px-6">
@@ -57,13 +61,14 @@ function Navbar({dict}: Readonly<{ dict: LangDictionary}>) {
           </Link>
   {/* 這一段是PC語系選擇 */}
             <div className="flex space-x-2">
-              <Link href='/en-US' scroll={false} >
+           
+              <Link href={`/en-US${pathname.split(lang)[1]}`} locale={lang} scroll={false} >
                 <Image src="/en-US.svg" alt="en-US" width={48} height={48} className="rounded-full" />
               </Link>
-              <Link href='/hi-IN' scroll={false}>
+              <Link href={`/hi-IN${pathname.split(lang)[1]}`} locale={lang} scroll={false}>
                 <Image src="/hi-IN.svg" alt="hi-IN" width={48} height={48} className="rounded-full" />
               </Link>
-              <Link href='/zh-TW' scroll={false}>
+              <Link href={`/zh-TW${pathname.split(lang)[1]}`} locale={lang} scroll={false}>
                 <Image src="/zh-TW.svg" alt="zh-TW" width={48} height={48} className="rounded-full" />
               </Link>
             </div>
