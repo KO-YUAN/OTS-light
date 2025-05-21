@@ -52,7 +52,7 @@ function Footer({
               </h2>
 
               <button className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
-              <Image src="/menu-close.svg" width={20} height={20} alt="Toggle" className="w-5 h-5" />
+              <Image src={isOpencom ? "/menu-close.svg" : "/menu-open.svg"}  width={20} height={20} alt="Toggle" className="w-5 h-5" />
               </button>
             </div>
 
@@ -100,7 +100,7 @@ function Footer({
                 onClick={() => setIsOpencom(!isOpencom)}
                 className="sm:hidden"
               >
-                <Image src="/menu-close.svg" width={20} height={20} alt="Toggle" className="w-5 h-5" />
+                <Image src={isOpencom ? "/menu-close.svg" : "/menu-open.svg"} width={20} height={20} alt="Toggle" className="w-5 h-5" />
               </button>
             </div>
 
