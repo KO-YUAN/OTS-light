@@ -48,7 +48,7 @@ function Footer({
          
             <div className="flex items-center justify-between sm:mb-[38px] mb-4">
               <h2 className="text-neutral_07 font-poppins text-sm font-semibold">
-                Company
+                {`${dict.products["company"]}`}
               </h2>
 
               <button className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -66,7 +66,7 @@ function Footer({
                 href="#"
                 className="font-poppins font-semibold text-sm text-neutral_04 hover:text-neutral_05"
               >
-                Home
+                {`${dict.products["home-btn"]}`}
               </Link>
               </li>
               <li className="sm:mb-8 mb-0">
@@ -74,7 +74,7 @@ function Footer({
                 href="#"
                 className="font-poppins font-semibold text-sm text-neutral_04 hover:text-neutral_05"
               >
-                Contact
+                {`${dict.products["contact-btn"]}`}
               </Link>
               </li>
               <li className="sm:mb-8 mb-0">
@@ -82,7 +82,7 @@ function Footer({
                 href="#"
                 className="font-poppins font-semibold text-sm text-neutral_04 hover:text-neutral_05"
               >
-                About
+                {`${dict.products["about-us-btn"]}`}
               </Link>
               </li>
             </ul>
@@ -92,7 +92,7 @@ function Footer({
      
             <div className="flex items-center justify-between sm:mb-[38px] mb-4">
               <h2 className="text-neutral_07 font-poppins text-sm font-semibold">
-                Community
+                {`${dict.products["about-us-btn"]}`}
               </h2>
 
       
@@ -137,8 +137,7 @@ function Footer({
               OPPORTUNE SOFT
             </Link>
             <p className=" font-poppins font-semibold text-sm text-neutral_04 sm:mt-[26px] mt-5 text-center sm:text-left">
-              14 F.-1, No. 21, Sec. 6, Zhongxiao E. Rd., Nangang Dist., Taipei
-              City 115025, Taiwan
+               {`${dict.products["address"]}`}
             </p>
           </div>
         </div>

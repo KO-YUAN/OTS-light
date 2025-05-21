@@ -11,12 +11,12 @@ function Navbar({dict,lang}: Readonly<{ dict: LangDictionary, lang: Lang }>) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
-  console.log("pathname",pathname,`/${lang}${pathname.split(lang)[1]}`)
-  const navLinks = [
-    { name: "Home", href: `/${lang}` },
-    { name: "Contact Us", href: `/${lang}/contact` },
-    { name: "About Us", href: `../${lang}/about` },
-  ];
+console.log("pathname",pathname,`/${lang}${pathname.split(lang)[1]}`)
+const navLinks = [
+  { name: `${dict.products["home-btn"]}`, href: `/${lang}` },
+  { name: `${dict.products["contact-btn"]}`, href: `/${lang}/contact` },
+  { name: `${dict.products["about-us-btn"]}`, href: `../${lang}/about` },
+];
 
 
   return (
