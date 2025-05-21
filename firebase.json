@@ -17,12 +17,12 @@
         "destination": "/zh-TW.html"
       },
       {
-        "source": "/zh-CN",
-        "destination": "/zh-CN.html"
+        "source": "/hi-IN",
+        "destination": "/hi-IN.html"
       },
       {
-        "source": "/en",
-        "destination": "/en.html"
+        "source": "/en-US",
+        "destination": "/en-US.html"
       }
     ]
   }
