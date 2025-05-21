@@ -1,9 +1,12 @@
 {
     "products": {
+      "address": "14 F.-1, No. 21, Sec. 6, Zhongxiao E. Rd., Nangang Dist., Taipei City 115025, Taiwan",
       "home-title": "हमारे साथ जुड़ें, और साथ में साधारण को नई परिभाषा दें!",
       "home-subtitle":"तकनीक के साथ भविष्य बनाएं। रचनात्मकता के साथ साधारण को बदलें। आइए मिलकर कुछ अद्भुत बनाएं!",
       "join-btn":"अभी हमारे साथ जुड़ें",
       "home-btn":"मुख्य पृष्ठ",
+      "company":"कंपनी",
+      "community":"समुदाय",
       "contact-btn":"हमसे संपर्क करें",
       "about-us-btn":"हमारे बारे में",
       "container-title-02":"जहाँ प्रदर्शन मिलती है शान",

@@ -1,9 +1,12 @@
 {
     "products": {
+      "address": "台北市南港區忠孝東路六段21號14號14樓之1",
       "home-title": "加入我們，共同重新定義平凡",
       "home-subtitle":"用科技打造未來。用創意顛覆平凡。讓我們一起創造非凡！",
       "join-btn":"立即加入我們",
       "home-btn":"首頁",
+      "company":"公司資訊",
+      "community":"社群",
       "contact-btn":"聯繫我們",
       "about-us-btn":"關於我們",
       "container-title-02":"性能與優雅的交匯處",
