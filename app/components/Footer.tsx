@@ -10,6 +10,7 @@ function Footer({
   }: Readonly<{ dict: LangDictionary}>) {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpencom, setIsOpencom] = useState(false);
+  const [isOpencom2, setIsOpencom2] = useState(false);
   return (
     <div>
       <section className="w-full bg-neutral_01">
@@ -46,13 +47,13 @@ function Footer({
         <div className="max-w-[1212px] mx-auto grid sm:grid-cols-3  grid-cols-1 px-4">
           <div className="sm:py-[55px] pt-8 sm:pl-[75px] pl-5 sm:border-r border-b border-neutral_03 relative ">
          
-            <div className="flex items-center justify-between sm:mb-[38px] mb-4">
+            <div className="flex items-center justify-between sm:mb-[38px] mb-4" onClick={() => setIsOpen(!isOpen)}>
               <h2 className="text-neutral_07 font-poppins text-sm font-semibold">
                 {`${dict.products["company"]}`}
               </h2>
 
-              <button className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
-              <Image src={isOpencom ? "/menu-close.svg" : "/menu-open.svg"}  width={20} height={20} alt="Toggle" className="w-5 h-5" />
+              <button className="sm:hidden" >
+              <Image src={isOpen ? "/menu-close.svg" : "/menu-open.svg"}  width={20} height={20} alt="Toggle" className="w-5 h-5" />
               </button>
             </div>
 
@@ -89,25 +90,20 @@ function Footer({
           </div>
 
           <div className="sm:py-[55px] pt-8 sm:pl-[75px] pl-5 sm:border-r border-b border-neutral_03 relative">
-     
-            <div className="flex items-center justify-between sm:mb-[38px] mb-4">
+
+            <div className="flex items-center justify-between sm:mb-[38px] mb-4" onClick={() => setIsOpencom2(!isOpencom2)}>
               <h2 className="text-neutral_07 font-poppins text-sm font-semibold">
                 {`${dict.products["about-us-btn"]}`}
               </h2>
-
-      
-              <button
-                onClick={() => setIsOpencom(!isOpencom)}
-                className="sm:hidden"
-              >
-                <Image src={isOpencom ? "/menu-close.svg" : "/menu-open.svg"} width={20} height={20} alt="Toggle" className="w-5 h-5" />
+              <button className="sm:hidden">
+                <Image src={isOpencom2 ? "/menu-close.svg" : "/menu-open.svg"} width={20} height={20} alt="Toggle" className="w-5 h-5" />
               </button>
             </div>
 
          
             <ul
               className={`flex flex-col sm:gap-8 gap-4 pb-4 md:pb-0 transition-all duration-300 ${
-                isOpencom ? "block" : "hidden"
+                isOpencom2 ? "block" : "hidden"
               } sm:block`}
             >
               <li className="sm:mb-8 mb-0">
