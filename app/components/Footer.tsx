@@ -9,7 +9,6 @@ function Footer({
    dict
   }: Readonly<{ dict: LangDictionary}>) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isOpencom, setIsOpencom] = useState(false);
   const [isOpencom2, setIsOpencom2] = useState(false);
   return (
     <div>
